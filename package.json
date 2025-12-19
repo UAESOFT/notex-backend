@@ -19,3 +19,7 @@
     "node": ">=18.0.0"
   }
 }
+{
+  "status": "ok",
+  "app": "NoteX Backend Running"
+}
