@@ -40,7 +40,7 @@ function handleTranscribe(req, res) {
   enhanced: false,
   source: 'mock'
 });
-
+ }
 app.post('/transcribe', upload.single('file'), handleTranscribe);
 app.post('/api/transcribe', upload.single('file'), handleTranscribe);
 
