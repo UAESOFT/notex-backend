@@ -32,14 +32,14 @@ function handleTranscribe(req, res) {
   }
 
   return res.json({
-    success: true,
-    transcript: 'تم استلام الملف الصوتي بنجاح ✅\n\nهذا نص تجريبي.',
-    originalName: req.file.originalname,
-    size: req.file.size,
-    enhanced: false,
-    source: 'mock'
-  });
-}
+  success: true,
+  text: 'تم استلام الملف الصوتي بنجاح ✅\n\nهذا نص تجريبي من السيرفر الجديد!',
+  transcript: 'تم استلام الملف الصوتي بنجاح ✅',  // للتوافق
+  originalName: req.file.originalname,
+  size: req.file.size,
+  enhanced: false,
+  source: 'mock'
+});
 
 app.post('/transcribe', upload.single('file'), handleTranscribe);
 app.post('/api/transcribe', upload.single('file'), handleTranscribe);
